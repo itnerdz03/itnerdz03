@@ -62,7 +62,6 @@ const ServerCard: React.FC<{
 
   const server = servers.find((s) => s.id === serverId);
   const stats = serverStats[serverId];
-  const _isConnected = rconConnected[serverId]; // Used for RCON status
 
   useEffect(() => {
     if (server && server.status === 'online') {
