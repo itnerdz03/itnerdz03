@@ -1,0 +1,42 @@
+[package]
+name = "rust-server-manager"
+version = "1.0.0"
+description = "FacePunch Rust Server Manager - Complete server management solution"
+authors = ["itnerdz03"]
+license = "MIT"
+repository = ""
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+tauri = { version = "1.5", features = ["shell-open", "dialog-all", "fs-all", "path-all", "process-all", "window-all"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = { version = "0.21", features = ["native-tls"] }
+futures-util = "0.3"
+rusqlite = { version = "0.30", features = ["bundled"] }
+bcrypt = "0.15"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.7", features = ["v4", "serde"] }
+log = "0.4"
+env_logger = "0.10"
+reqwest = { version = "0.11", features = ["json", "blocking"] }
+zip = "0.6"
+regex = "1.10"
+base64 = "0.21"
+thiserror = "1.0"
+once_cell = "1.19"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

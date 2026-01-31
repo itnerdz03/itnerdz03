@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rust-red: #cd2417;
+  --rust-orange: #f04d3c;
+  --dark-bg: #1a1a1a;
+  --dark-surface: #252525;
+  --dark-border: #333333;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rust-red) var(--dark-bg);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--rust-red);
+  border-radius: 4px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--dark-bg);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom utility classes */
+.glass-effect {
+  background: rgba(37, 37, 37, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rust-gradient {
+  background: linear-gradient(135deg, #cd2417 0%, #f04d3c 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #cd2417 0%, #f04d3c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Status indicators */
+.status-online {
+  color: #4caf50;
+}
+
+.status-offline {
+  color: #f44336;
+}
+
+.status-warning {
+  color: #ff9800;
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Console styling */
+.console-output {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.console-command {
+  color: #4a90d9;
+}
+
+.console-response {
+  color: #b0b0b0;
+}
+
+.console-error {
+  color: #f44336;
+}
+
+.console-warning {
+  color: #ff9800;
+}
+
+.console-success {
+  color: #4caf50;
+}
+
+/* Server card hover effect */
+.server-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.server-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Player list row hover */
+.player-row:hover {
+  background-color: rgba(205, 36, 23, 0.1);
+}
+
+/* Plugin card */
+.plugin-card {
+  transition: all 0.2s ease;
+}
+
+.plugin-card:hover {
+  border-color: var(--rust-red);
+}
+
+/* Tier badges */
+.tier-free {
+  background: linear-gradient(135deg, #666 0%, #888 100%);
+}
+
+.tier-basic {
+  background: linear-gradient(135deg, #2196f3 0%, #64b5f6 100%);
+}
+
+.tier-pro {
+  background: linear-gradient(135deg, #9c27b0 0%, #ba68c8 100%);
+}
+
+.tier-enterprise {
+  background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+}
+
+.tier-admin {
+  background: linear-gradient(135deg, #cd2417 0%, #f04d3c 100%);
+}
