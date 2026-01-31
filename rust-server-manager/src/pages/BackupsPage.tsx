@@ -35,7 +35,6 @@ import {
   Backup as BackupIcon,
   Restore as RestoreIcon,
   Refresh as RefreshIcon,
-  Download as DownloadIcon,
 } from '@mui/icons-material';
 import { useStore } from '../store';
 

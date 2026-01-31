@@ -62,7 +62,7 @@ const ServerCard: React.FC<{
 
   const server = servers.find((s) => s.id === serverId);
   const stats = serverStats[serverId];
-  const isConnected = rconConnected[serverId];
+  const _isConnected = rconConnected[serverId]; // Used for RCON status
 
   useEffect(() => {
     if (server && server.status === 'online') {
@@ -234,7 +234,7 @@ const ServerCard: React.FC<{
 
 const DashboardPage: React.FC = () => {
   const navigate = useNavigate();
-  const { user, servers, loadServers, selectServer, loading } = useStore();
+  const { user, servers, loadServers, selectServer } = useStore();
   const [initialLoad, setInitialLoad] = useState(true);
 
   useEffect(() => {

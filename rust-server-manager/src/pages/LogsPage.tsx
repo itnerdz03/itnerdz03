@@ -26,7 +26,6 @@ import {
 import {
   Refresh as RefreshIcon,
   Search as SearchIcon,
-  Delete as ClearIcon,
   Download as ExportIcon,
 } from '@mui/icons-material';
 import { useStore } from '../store';

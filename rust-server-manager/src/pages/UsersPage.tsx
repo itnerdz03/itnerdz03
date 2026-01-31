@@ -32,7 +32,6 @@ import {
   Edit as EditIcon,
   Refresh as RefreshIcon,
   Search as SearchIcon,
-  PersonAdd as AddIcon,
 } from '@mui/icons-material';
 import { useStore } from '../store';
 import { invoke } from '@tauri-apps/api/tauri';

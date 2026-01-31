@@ -19,9 +19,6 @@ import {
   Chip,
   Alert,
   Tooltip,
-  RadioGroup,
-  Radio,
-  FormControlLabel,
 } from '@mui/material';
 import {
   Upload as UploadIcon,
@@ -44,7 +41,6 @@ const MapsPage: React.FC = () => {
     setMap,
   } = useStore();
 
-  const [dialogOpen, setDialogOpen] = useState(false);
   const [customMapDialogOpen, setCustomMapDialogOpen] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [customMapUrl, setCustomMapUrl] = useState('');
@@ -62,7 +58,6 @@ const MapsPage: React.FC = () => {
     try {
       await setMap(selectedServer.id, mapName, customUrl);
       setMessage({ type: 'success', text: `Map changed to ${mapName}. Restart server to apply.` });
-      setDialogOpen(false);
       setCustomMapDialogOpen(false);
     } catch (err) {
       setMessage({ type: 'error', text: String(err) });
