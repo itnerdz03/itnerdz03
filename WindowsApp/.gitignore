@@ -1,0 +1,77 @@
+# Build directories
+build/
+bin/
+obj/
+out/
+x64/
+x86/
+Debug/
+Release/
+
+# Visual Studio files
+*.user
+*.aps
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+*.obj
+*.pch
+*.pdb
+*.idb
+*.exe
+*.dll
+ipch/
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+.vs/
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Compiled Object files
+*.o
+*.lo
+*.slo
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Executables
+*.exe
+*.out
+*.app
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

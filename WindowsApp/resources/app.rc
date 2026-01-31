@@ -1,0 +1,100 @@
+/**
+ * Windows Desktop Application Resource File
+ */
+
+#include <windows.h>
+#include "../include/resource.h"
+
+// Application Icon
+IDI_APPICON ICON "app.ico"
+
+// Application Manifest for Visual Styles
+1 RT_MANIFEST "app.manifest"
+
+// Main Menu
+IDR_MAINMENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",        ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",           ID_FILE_SAVE
+        MENUITEM "Save &As...",             ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",           ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",           ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",           ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",           ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",          ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A",     ID_EDIT_SELECTALL
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",             ID_VIEW_STATUSBAR, CHECKED
+        MENUITEM "&Toolbar",                ID_VIEW_TOOLBAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Documentation",          ID_HELP_DOCUMENTATION
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",               ID_HELP_ABOUT
+    END
+END
+
+// Accelerator Table
+IDR_MAINMENU ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,        VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,       VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,       VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,       VIRTKEY, CONTROL
+    "Y",            ID_EDIT_REDO,       VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,        VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,       VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,      VIRTKEY, CONTROL
+    "A",            ID_EDIT_SELECTALL,  VIRTKEY, CONTROL
+END
+
+// Version Information
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "itnerdz03"
+            VALUE "FileDescription",  "Windows Desktop Application"
+            VALUE "FileVersion",      "1.0.0.0"
+            VALUE "InternalName",     "WindowsApp"
+            VALUE "LegalCopyright",   "Copyright (c) 2024 itnerdz03. MIT License."
+            VALUE "OriginalFilename", "WindowsApp.exe"
+            VALUE "ProductName",      "Windows Desktop Application"
+            VALUE "ProductVersion",   "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0x04B0
+    END
+END
+
+// String Table
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE       "Windows Desktop Application"
+    IDS_WINDOW_CLASS    "WindowsAppClass"
+END
